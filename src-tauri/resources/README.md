@@ -2,7 +2,7 @@
 
 原始角色立绘不再随源码或标准安装包分发。
 
-- 下载：[Murasame 角色素材包](https://github.com/salan-01/Murasame/releases/tag/assets-v1)
+- 下载：[ai桌宠角色素材包](https://github.com/salan-01/ai-desktop-pet/releases/tag/assets-v1)
 - 素材包包含 `sprites/`（丛雨）、`natsume_sprites/`（夏目）和导入说明。
 - 解压到本机固定目录后，启动桌宠，在「设置 → 立绘管理 → 从文件夹导入」中选择其中一个角色文件夹。
 - 新角色可在「角色预设」中创建，再为该角色导入立绘。

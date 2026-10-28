@@ -1,6 +1,6 @@
 <div align="center">
 
-# Murasame · 丛雨 AI 桌宠
+# ai桌宠 · AI 桌面陪伴伙伴
 
 **让陪伴，留在桌面。**
 
@@ -10,13 +10,13 @@
 
 [快速开始](#快速开始) · [素材下载](#素材下载) · [使用与配置](#使用与配置) · [常见问题](#常见问题) · [架构与实现](项目介绍文档.md)
 
-![Murasame 桌宠总览](docs/images/overview.png)
+![ai桌宠总览](docs/images/overview.png)
 
 </div>
 
 ## 项目介绍
 
-Murasame 是一款以角色陪伴为核心的 AI 二次元桌宠。角色通过透明、无边框、置顶的窗口显示在桌面上，你可以和她聊天、摸摸头，或者让她安静地陪着你。
+ai桌宠是一款以角色陪伴为核心的 AI 二次元桌宠。角色通过透明、无边框、置顶的窗口显示在桌面上，你可以和她聊天、摸摸头，或者让她安静地陪着你。
 
 它把大模型对话、角色人设、情绪立绘、本地语音和长期记忆连接在一起：AI 的回复既显示为文字气泡，也可以驱动表情变化，并交给本地 VITS 服务合成日语语音。用户一段时间没有互动时，角色还会结合时段和闲置阶段主动搭话。
 
@@ -41,7 +41,7 @@ Murasame 是一款以角色陪伴为核心的 AI 二次元桌宠。角色通过�
 
 ## 素材下载
 
-**[下载独立角色素材包 Murasame-assets-v1.zip](https://github.com/salan-01/Murasame/releases/download/assets-v1/Murasame-assets-v1.zip)** · [素材包发布页](https://github.com/salan-01/Murasame/releases/tag/assets-v1)
+**[下载 ai桌宠独立角色素材包（ZIP）](https://github.com/salan-01/ai-desktop-pet/releases/download/assets-v1/Murasame-assets-v1.zip)** · [素材包发布页](https://github.com/salan-01/ai-desktop-pet/releases/tag/assets-v1)
 
 素材包约 52 MiB，包含丛雨 20 张立绘、夏目 20 张立绘、素材映射文件、导入说明及 SHA-256 校验清单。原始角色图片不再随当前源码树和标准安装包分发。
 
@@ -53,14 +53,14 @@ Murasame-assets-v1.zip
 └─ SHA256SUMS.txt            原始素材校验清单
 ```
 
-1. 将素材包解压到本机固定目录，例如 `D:\Murasame-assets`。
+1. 将素材包解压到本机固定目录，例如 `D:\ai-desktop-pet-assets`。
 2. 启动桌宠，从托盘打开设置，或点击空角色占位提示。
 3. 在「立绘管理 → 从文件夹导入」中选择 `sprites` 或 `natsume_sprites` 文件夹。
 4. 需要多个角色时，在「角色预设」中分别创建或编辑角色并导入对应素材。
 
 导入功能保存本机文件路径，请在导入后保留素材目录。首次启动尚未配置立绘时会显示占位提示。应用图标与 README 预览图继续由主仓库维护。
 
-角色素材仍适用原权利人的使用条件。此次拆分没有改写 Git 历史，旧提交中仍保留原始素材。
+首版素材包保留已发布的文件名 `Murasame-assets-v1.zip`，下载入口已同步到新仓库地址。角色素材仍适用原权利人的使用条件。此次拆分没有改写 Git 历史，旧提交中仍保留原始素材。
 
 ## 核心功能
 
@@ -116,8 +116,8 @@ AI 的回复约定包含中文正文、日语语音标签和情绪标签，例�
 ### 2. 获取项目并启动
 
 ```powershell
-git clone https://github.com/salan-01/Murasame.git
-cd Murasame
+git clone https://github.com/salan-01/ai-desktop-pet.git
+cd ai-desktop-pet
 npm ci
 npm run tauri:dev
 ```
@@ -259,7 +259,7 @@ Windows 安装包输出到 `src-tauri/target/release/bundle/nsis/`。当前配�
 ## 项目结构
 
 ```text
-Murasame/
+ai-desktop-pet/
 ├─ src/
 │  ├─ App.vue                    主界面、互动与状态编排
 │  ├─ components/                立绘、气泡、输入、设置、聊天和记忆面板
@@ -304,7 +304,7 @@ Murasame/
 
 **窗口不见了？**
 
-点击系统托盘中的 Murasame 图标，或右键托盘选择「显示/隐藏」。
+点击系统托盘中的 ai桌宠图标，或右键托盘选择「显示/隐藏」。
 
 ## 第三方素材与依赖
 

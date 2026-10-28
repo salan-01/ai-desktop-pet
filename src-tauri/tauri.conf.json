@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/nicepkg/vscode-tauri/main/schemas/tauri.conf.schema.json",
-  "productName": "Murasame",
+  "productName": "ai桌宠",
   "version": "1.0.0",
   "identifier": "com.desktop-pet.app",
   "build": {
@@ -14,7 +14,7 @@
     "windows": [
       {
         "label": "main",
-        "title": "Murasame",
+        "title": "ai桌宠",
         "width": 500,
         "height": 600,
         "x": 0,

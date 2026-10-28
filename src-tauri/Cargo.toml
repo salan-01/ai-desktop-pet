@@ -1,12 +1,12 @@
 [package]
-name = "desktop-pet"
+name = "ai-desktop-pet"
 version = "1.0.0"
-description = "AI Desktop Pet"
+description = "ai桌宠 — AI Desktop Companion"
 authors = [""]
 edition = "2021"
 
 [lib]
-name = "desktop_pet_lib"
+name = "ai_desktop_pet_lib"
 crate-type = ["staticlib", "rlib"]
 
 [build-dependencies]

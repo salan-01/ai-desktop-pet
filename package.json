@@ -1,7 +1,7 @@
 {
-  "name": "desktop-pet",
+  "name": "ai-desktop-pet",
   "version": "1.0.0",
-  "description": "AI二次元桌面宠物",
+  "description": "ai桌宠 — AI 桌面陪伴伙伴",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",

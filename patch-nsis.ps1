@@ -102,7 +102,7 @@ Write-Host "Running makensis..."
 Write-Host "Copying output..."
 $output = Join-Path $nsisDir "nsis-output.exe"
 $bundleDir = Join-Path $projectRoot "src-tauri\target\release\bundle\nsis"
-Copy-Item $output (Join-Path $bundleDir "Murasame_1.0.0_x64-setup.exe") -Force
+Copy-Item $output (Join-Path $bundleDir "ai桌宠_1.0.0_x64-setup.exe") -Force
 
 # Copy VITS folder alongside installer
 if (Test-Path $vitsStaging) {
@@ -115,7 +115,7 @@ if (Test-Path $vitsStaging) {
     Write-Host "VITS bundle copy done."
 }
 
-Write-Host "Done! Installer is at: $bundleDir\Murasame_1.0.0_x64-setup.exe"
+Write-Host "Done! Installer is at: $bundleDir\ai桌宠_1.0.0_x64-setup.exe"
 Write-Host "Run the installer from a folder that also contains the 'vits' folder."
 
 # === 7-Zip SFX: bundle installer + vits into single self-extracting EXE ===
@@ -152,7 +152,7 @@ if (-not $sfxModuleToUse) {
 
 if ((Test-Path $sevenZip) -and $sfxModuleToUse -and (Test-Path $vitsStaging)) {
 	Write-Host "Creating self-extracting archive..."
-	$sfxOutput = Join-Path $bundleDir "Murasame_Setup.exe"
+	$sfxOutput = Join-Path $bundleDir "ai桌宠_Setup.exe"
 	$archive7z = Join-Path $bundleDir "bundle.7z"
 	$configFile = Join-Path $bundleDir "sfx.conf"
 
@@ -160,23 +160,23 @@ if ((Test-Path $sevenZip) -and $sfxModuleToUse -and (Test-Path $vitsStaging)) {
 	if ($sfxAutoRun) {
 		@"
 ;!@Install@!UTF-8!
-Title="丛雨桌面宠物 - 安装程序"
-BeginPrompt="即将安装丛雨桌面宠物 (含 VITS 语音)。是否继续？"
-ExecuteFile="Murasame_1.0.0_x64-setup.exe"
+Title="ai桌宠 - 安装程序"
+BeginPrompt="即将安装ai桌宠 (含 VITS 语音)。是否继续？"
+ExecuteFile="ai桌宠_1.0.0_x64-setup.exe"
 ;!@InstallEnd@!
 "@ | Out-File -FilePath $configFile -Encoding UTF8
 	} else {
 		@"
 ;!@Install@!UTF-8!
-Title="丛雨桌面宠物 - 安装程序"
-BeginPrompt="即将解压丛雨桌面宠物安装包 (含 VITS 语音)。解压后请运行 Murasame_1.0.0_x64-setup.exe 完成安装。是否继续？"
+Title="ai桌宠 - 安装程序"
+BeginPrompt="即将解压ai桌宠安装包 (含 VITS 语音)。解压后请运行 ai桌宠_1.0.0_x64-setup.exe 完成安装。是否继续？"
 ;!@InstallEnd@!
 "@ | Out-File -FilePath $configFile -Encoding UTF8
 	}
 
 	# Create 7z archive (store mode for speed — files are already compressed, VITS is 7.7GB)
 	Push-Location $bundleDir
-	& $sevenZip a -mx0 -mmt8 $archive7z "Murasame_1.0.0_x64-setup.exe" "vits" 2>&1 | Out-Null
+	& $sevenZip a -mx0 -mmt8 $archive7z "ai桌宠_1.0.0_x64-setup.exe" "vits" 2>&1 | Out-Null
 	Pop-Location
 
 	if (Test-Path $archive7z) {
@@ -188,7 +188,7 @@ BeginPrompt="即将解压丛雨桌面宠物安装包 (含 VITS 语音)。解压�
 			Write-Host "Self-extracting archive (auto-run) created: $sfxOutput"
 		} else {
 			Write-Host "Self-extracting archive created: $sfxOutput"
-			Write-Host "NOTE: User must run Murasame_1.0.0_x64-setup.exe manually after extraction."
+			Write-Host "NOTE: User must run ai桌宠_1.0.0_x64-setup.exe manually after extraction."
 		}
 	} else {
 		Write-Host "7z creation failed, skipping SFX."

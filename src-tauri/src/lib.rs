@@ -870,7 +870,7 @@ pub fn run() {
 
             let tray = TrayIconBuilder::new()
                 .icon(icon_data)
-                .tooltip("Murasame")
+                .tooltip("ai桌宠")
                 .menu(&menu)
                 .on_menu_event(|app, event| match event.id.as_ref() {
                     "show" => {
