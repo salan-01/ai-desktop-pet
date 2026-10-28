@@ -1,0 +1,29 @@
+{
+  "name": "desktop-pet",
+  "version": "1.0.0",
+  "description": "AI二次元桌面宠物",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build && powershell -ExecutionPolicy Bypass -File patch-nsis.ps1"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.0.0",
+    "@tauri-apps/plugin-dialog": "^2.0.0",
+    "pinia": "^2.1.7",
+    "png-to-ico": "^3.0.1",
+    "to-ico": "^1.1.5",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "sharp": "^0.34.5",
+    "typescript": "^5.4.2",
+    "vite": "^5.1.6",
+    "vue-tsc": "^2.0.6"
+  }
+}

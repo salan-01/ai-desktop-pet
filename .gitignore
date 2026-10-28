@@ -1,0 +1,45 @@
+# Dependencies and build output
+node_modules/
+dist/
+target/
+src-tauri/gen/
+
+# Local environments, credentials, and user data
+.env
+.env.*
+!.env.example
+settings.json
+chat_history.json
+*.log
+*.db
+*.db-*
+*.mv.db
+*.trace.db
+
+# Voice servers, Python environments, and model weights
+vits/
+Style-Bert-VITS2/
+py310/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.onnx
+
+# Editor files and temporary backups
+.idea/
+.vscode/
+.agents/
+.codex/
+.DS_Store
+Thumbs.db
+*.bak
+*.bak_*
+*.tmp
+
+# Separate Spring Boot application
+ai-assistant-vue-spring/

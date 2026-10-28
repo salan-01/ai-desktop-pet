@@ -1,0 +1,64 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nicepkg/vscode-tauri/main/schemas/tauri.conf.schema.json",
+  "productName": "Murasame",
+  "version": "1.0.0",
+  "identifier": "com.desktop-pet.app",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:5173",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
+  },
+  "app": {
+    "withGlobalTauri": false,
+    "windows": [
+      {
+        "label": "main",
+        "title": "Murasame",
+        "width": 500,
+        "height": 600,
+        "x": 0,
+        "y": 0,
+        "resizable": false,
+        "decorations": false,
+        "transparent": true,
+        "alwaysOnTop": true,
+        "skipTaskbar": true,
+        "shadow": false
+      }
+    ],
+    "security": {
+      "csp": null,
+      "assetProtocol": {
+        "scope": ["**"]
+      }
+    }
+  },
+  "plugins": {
+    "dialog": null
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "icon": [
+      "icons/256x256.png",
+      "icons/128x128.png",
+      "icons/32x32.png",
+      "icons/icon.ico"
+    ],
+    "resources": [
+      "resources/sprites/*",
+      "resources/natsume_sprites/*"
+    ],
+    "windows": {
+      "nsis": {
+        "installMode": "currentUser",
+        "languages": ["SimpChinese", "English"]
+      },
+      "webviewInstallMode": {
+        "type": "offlineInstaller",
+        "silent": true
+      }
+    }
+  }
+}
