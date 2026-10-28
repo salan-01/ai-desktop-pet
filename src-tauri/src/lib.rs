@@ -181,7 +181,9 @@ fn apply_resource_sprites(settings: &mut PetSettings, resource_dir: &Path) {
     for (emotion, sprite_set) in settings.sprites.iter_mut() {
         let filename = sprite_filename(emotion);
         let img_path = sprites_dir.join(filename);
-        sprite_set.images = vec![img_path.to_string_lossy().to_string()];
+        if img_path.is_file() {
+            sprite_set.images = vec![img_path.to_string_lossy().to_string()];
+        }
     }
 }
 

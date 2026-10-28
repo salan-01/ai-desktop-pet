@@ -137,8 +137,8 @@ function onClickSettings(e: MouseEvent) {
       draggable="false"
     />
     <div v-else class="pet-placeholder">
-      <div class="placeholder-text">馃惐</div>
-      <div class="placeholder-label" @mousedown.stop @click="onClickSettings">鐐瑰嚮璁剧疆绔嬬粯</div>
+      <div class="placeholder-text">🐾</div>
+      <div class="placeholder-label" @mousedown.stop @click="onClickSettings">点击设置并导入立绘</div>
     </div>
   </div>
 </template>

@@ -43,3 +43,9 @@ Thumbs.db
 
 # Separate Spring Boot application
 ai-assistant-vue-spring/
+
+# Character artwork is distributed as a separate asset pack
+/src-tauri/resources/sprites/
+/src-tauri/resources/natsume_sprites/
+/Murasame-assets/
+*.zip
